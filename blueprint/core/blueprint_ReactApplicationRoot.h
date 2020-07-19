@@ -11,6 +11,7 @@
 
 #include <optional>
 
+#include "blueprint_AnimatedShadowView.h"
 #include "blueprint_CanvasView.h"
 #include "blueprint_EcmascriptEngine.h"
 #include "blueprint_ImageView.h"
@@ -451,6 +452,13 @@ namespace blueprint
             viewManager->registerViewType("View", []() -> ViewPair {
                 auto view = std::make_unique<View>();
                 auto shadowView = std::make_unique<ShadowView>(view.get());
+
+                return {std::move(view), std::move(shadowView)};
+            });
+
+            viewManager->registerViewType("AnimatedView", []() -> ViewPair {
+                auto view = std::make_unique<View>();
+                auto shadowView = std::make_unique<AnimatedShadowView>(view.get());
 
                 return {std::move(view), std::move(shadowView)};
             });

@@ -58,6 +58,7 @@
 #include "duktape/extras/console/duk_console.h"
 #include "duktape/examples/debug-trans-socket/duk_trans_socket.h"
 
+#include "core/blueprint_AnimatedShadowView.h"
 #include "core/blueprint_EcmascriptEngine.h"
 #include "core/blueprint_CanvasView.h"
 #include "core/blueprint_GenericEditor.h"

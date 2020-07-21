@@ -26,7 +26,7 @@ class App extends Component {
   render() {
     return (
       <View {...styles.container}>
-        <View {...styles.content}>
+        <View animated {...styles.content}>
           <Image source={require('./logo.svg')} {...styles.logo} />
           <Slider paramId="MainGain" {...styles.knob}>
             <Label paramId="MainGain" {...styles.label} />

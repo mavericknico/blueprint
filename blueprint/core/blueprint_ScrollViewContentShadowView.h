@@ -35,7 +35,7 @@ namespace blueprint
             : ShadowView(_view) {}
 
         //==============================================================================
-        void flushViewLayout() override
+        void flushViewLayout(bool animated = false) override
         {
             auto pos = view->getPosition().toFloat();
             auto bounds = getCachedLayoutBounds().withPosition(pos);
